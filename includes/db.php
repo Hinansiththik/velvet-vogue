@@ -1,8 +1,10 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "velvet_vogue";
+include 'env.php';
+
+$host = $_ENV['DB_HOST'];
+$username = $_ENV['DB_USER'];
+$password = $_ENV['DB_PASS'];
+$database = $_ENV['DB_NAME'];
 
 $conn = mysqli_connect($host, $username, $password, $database);
 
